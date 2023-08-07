@@ -14,46 +14,136 @@
 <body>
     <div class="container">
         <p class="title"><span>Bundle & Save</span></p>
-        <div class="box">
-            <input type="radio" class="round" />
-            <label>
-                <div class="details">
-                    <div>
-                        <p>1 Pair</p>
-                        <p>DKK 195.00</p>
+
+        <div class="main" data-expandable="1">
+            <div class="box">
+                <input type="radio" class="round" name="bundle" id="bundle1" />
+                <label for="bundle1">
+                    <div class="details">
+                        <div>
+                            <p>1 Pair</p>
+                            <p>DKK 195.00</p>
+                        </div>
+                        <p>50% OFF</p>
                     </div>
-                    <p>50% OFF</p>
+                </label>
+            </div>
+            <div class="expandable">
+                <div class="size" style="display: flex;flex-direction: column;">
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
                 </div>
-            </label>
-        </div>
-        <div class="box">
-            <input type="radio" class="round" />
-            <label>
-                <div class="details">
-                    <div>
-                        <p>2 Pair</p>
-                        <p>DKK 345.00</p>
-                    </div>
-                    <p class="strike">DKK 195.00</p>
-                    <div class="offer">
-                        <p class="popular">Most Popular</p>
-                        <p>40% OFF</p>
-                    </div>
+                <div class="color" style="display: flex;flex-direction: column;">
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
                 </div>
-            </label>
+
+            </div>
         </div>
-        <div class="box">
-            <input type="radio" class="round" />
-            <label>
-                <div class="details">
-                    <div>
-                        <p>3 Pair</p>
-                        <p>DKK 528.00</p>
+
+        <div class="main" data-expandable="2">
+            <div class="box">
+                <input type="radio" class="round" name="bundle" id="bundle2" />
+                <label for="bundle2">
+                    <div class="details">
+                        <div>
+                            <p >2 Pair</p>
+                            <p >DKK 345.00</p>
+                        </div>
+                        <p class="strike" style="font-size: 12.65px;">DKK 195.00</p>
+                        <div class="offer">
+                            <p class="popular" style="font-size: 12.65px;">Most Popular</p>
+                            <p class="para" >40% OFF</p>
+                        </div>
                     </div>
-                    <p>60% OFF</p>
+                </label>
+            </div>
+            <div class="expandable">
+                <div class="size" style="display: flex;flex-direction: column;">
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
                 </div>
-            </label>
+                <div class="color" style="display: flex;flex-direction: column;">
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+
+            </div>
         </div>
+
+        <div class="main" data-expandable="3">
+            <div class="box">
+                <input type="radio" class="round" name="bundle" id="bundle3" />
+                <label for="bundle3">
+                    <div class="details">
+                        <div>
+                            <p>3 Pair</p>
+                            <p>DKK 528.00</p>
+                        </div>
+                        <p>60% OFF</p>
+                    </div>
+                </label>
+            </div>
+            <div class="expandable">
+                <div class="size" style="display: flex;flex-direction: column;">
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                    <select name="size" id="size-1">
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                    </select>
+                </div>
+                <div class="color" style="display: flex;flex-direction: column">
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                    <select name="color" id="color-1">
+                        <option value="red">Red</option>
+                        <option value="blue">Blue</option>
+                        <option value="green">Green</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
         <div class="price">
             <p style="color: #007F61;">Free 2 day Shipping</p>
             <p>Total: DKK 360.00</p>
@@ -64,3 +154,28 @@
 </body>
 
 </html>
+
+<script>
+    const boxes = document.querySelectorAll('.box');
+    const expandables = document.querySelectorAll('.expandable');
+
+    function hideAllBoxes() {
+        expandables.forEach((expandable) => {
+            expandable.style.display = 'none';
+        });
+    }
+
+    function showBox(index) {
+        expandables[index].style.display = 'flex';
+        expandables[index].style.gap = '10px';
+    }
+
+    boxes.forEach((box, index) => {
+        box.addEventListener('click', () => {
+            hideAllBoxes();
+            showBox(index);
+        });
+    });
+
+
+</script>

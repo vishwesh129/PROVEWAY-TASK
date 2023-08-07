@@ -8,9 +8,9 @@
     flex-direction: column;
     gap: 15px;
     background-color: white;
-    width: 30%;
-    padding: 40px 20px 20px 20px;
-    margin: 50px auto;
+    width: 35%;
+    padding: 35px 20px 20px 20px;
+    margin: 38px auto;
     align-items: center;
     border: 1px solid #C8C8C8;
 }
@@ -18,60 +18,93 @@
 .title {
     text-align: center;
     color: #007F61;
-    width: 80%;
+    width: 70%;
     text-align: center;
     border-bottom: 1px solid #b0b0b0;
     line-height: 0.1em;
     font-size: 18px;
 }
 
-.title span{
-    padding:0 10px;
+.title span {
+    padding: 0 10px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 77%;
+    align-items: center;
+    border: 1px solid #C8C8C8;
+    border-radius: 3px;
+    padding: 5px;
+}
+.main p{
+    font-size: 14.46px;
 }
 
 .box {
-    width: 75%;
+    width: 85%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid #C8C8C8;
-    border-radius: 3px;
     padding: 0 20px;
 }
 
-input[type='radio']{
+input[type='radio'] {
     width: 20px;
     height: 20px;
+    /* margin-left: 3px; */
 }
-
-.details {
+.details1 {
+    width: auto;
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: -280px;
+}
+.details {
+    width: auto;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-left: -280px;
 }
 
+#size-1 , #color-1{
+    border-color: #D9D9D9;
+    border-radius: 1.81px;
+    width: 65.98px;
+    height: 25.31px;
+    font-size: 10.85px;
+    margin-bottom: 5px;
+}
+
 .price {
-    width: 90%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     gap: 10px;
 }
-.strike{
+
+.strike {
     text-decoration: line-through;
     color: #9F9F9F;
-    font-size: 12px;
     margin-top: 48px;
-    margin-left: 5px;
+
 }
-.offer{
+
+.offer {
     text-align: end;
 }
-.popular{
+
+.popular {
     color: #007F61;
 }
+
 button {
-    width: 85%;
+    width: 80%;
     padding: 15px;
     background-color: #007F61;
     color: white;
@@ -87,4 +120,14 @@ button {
     margin-top: -5px;
     font-style: italic;
     font-size: 12PX;
+}
+
+.box.active {
+    height: 200px;
+    /* Adjust the height as needed */
+}
+
+.expandable {
+    /* Your existing styles for the content inside the box... */
+    display: none;
 }
